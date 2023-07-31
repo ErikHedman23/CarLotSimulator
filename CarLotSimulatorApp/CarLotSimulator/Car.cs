@@ -30,12 +30,15 @@ namespace CarLotSimulator
             HonkNoise = honkNoise;
             IsDriveable = isDriveable;
         }
-        public void MakeEngineNoise()
+        public void MakeEngineNoise(string engineNoise)
         {
-            Console.WriteLine($"The {Year} {Make} {Model} is revving up! '{EngineNoise}'");
+            EngineNoise = engineNoise;
+            Console.WriteLine($"The {Year} {Make} {Model} is revving up! '{engineNoise}'");
         }
         public void MakeHonkNoise()
         {
+
+            
             Console.WriteLine("Type true if your car is driveable, and false if it is not.");
             var userInfo = Console.ReadLine(); 
             var checkEngine = bool.TryParse(userInfo, out bool response);
