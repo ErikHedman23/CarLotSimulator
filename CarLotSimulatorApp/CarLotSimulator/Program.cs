@@ -40,7 +40,7 @@ namespace CarLotSimulator
             car_3.MakeHonkNoise(false);
 
             garage.CarsLot.Add(car_3);
-
+            Console.WriteLine("\nThese are the cars in my garage!");
             garage.MyGarage();
 
             
