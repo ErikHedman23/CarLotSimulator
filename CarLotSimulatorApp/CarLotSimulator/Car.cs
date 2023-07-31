@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 
 namespace CarLotSimulator
 {
@@ -33,17 +34,30 @@ namespace CarLotSimulator
         {
             Console.WriteLine($"The {Year} {Make} {Model} is revving up! '{EngineNoise}'");
         }
-        public void MakeHonkNoise(bool isDriveable)
+        public void MakeHonkNoise()
         {
-            if (isDriveable == true)
+            Console.WriteLine("Type true if your car is driveable, and false if it is not.");
+            var userInfo = Console.ReadLine(); 
+            var checkEngine = bool.TryParse(userInfo, out bool response);
+            if(checkEngine == false)
             {
-             Console.WriteLine($"{Year} {Make} {Model} '{HonkNoise}'!");
-
+                Console.WriteLine("Uh oh, this one isn't wanting to start... strange.");
             }
             else
             {
-                Console.WriteLine("Uh oh, this one isn't starting for some reason...");
+                Console.WriteLine($"{HonkNoise}!");
             }
+
+
+            //if (isDriveable == true)
+            //{
+             //Console.WriteLine($"{Year} {Make} {Model} '{HonkNoise}'!");
+
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Uh oh, this one isn't starting for some reason...");
+            //}
         }
         public void CarDetails()
         {
