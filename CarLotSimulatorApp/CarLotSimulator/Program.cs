@@ -23,21 +23,21 @@ namespace CarLotSimulator
             car_1.HonkNoise = "Honk";
             car_1.IsDriveable = true;
             car_1.MakeEngineNoise(car_1.EngineNoise);
-            car_1.MakeHonkNoise();
+            car_1.MakeHonkNoise(car_1.IsDriveable);
 
             garage.CarsLot.Add(car_1);
 
             Car car_2 = new Car(2000, "Ford", "F-150", "hummmmmmmm", "Honk Honk", true);
 
             car_2.MakeEngineNoise(car_2.EngineNoise);
-            car_2.MakeHonkNoise();
+            car_2.MakeHonkNoise(car_2.IsDriveable);
 
             garage.CarsLot.Add(car_2);
 
             var car_3 = new Car(1990, "Volkswagen", "Beetle", "mmmmmmmmmmm", "beee-beeep", false);
 
             car_3.MakeEngineNoise(car_3.EngineNoise);
-            car_3.MakeHonkNoise();
+            car_3.MakeHonkNoise(car_3.IsDriveable);
 
             garage.CarsLot.Add(car_3);
             Console.WriteLine("\nThese are the cars in my garage!");
