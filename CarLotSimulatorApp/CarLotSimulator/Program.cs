@@ -8,6 +8,8 @@ namespace CarLotSimulator
         {
 
             var garage = new CarLot();
+            CarLot newCar = new CarLot();
+            Console.WriteLine($"The number of cars in your garage is: {CarLot.numberOfCars}");
             //TODO
 
             //Create a seperate class file called Car
@@ -15,8 +17,9 @@ namespace CarLotSimulator
             //Car shall have the following methods: MakeEngineNoise(), MakeHonkNoise()
             //The methods should take one string parameter: the respective noise property
             Car car_1 = new Car();
-            
-                car_1.Year = 1999;
+            Console.WriteLine($"The total number of cars in your garage is: {CarLot.numberOfCars}");
+
+            car_1.Year = 1999;
                 car_1.Make = "Cheverolet";
             car_1.Model = "Trailblazer";
             car_1.EngineNoise = "'rummmmmmmm'";
@@ -26,15 +29,16 @@ namespace CarLotSimulator
             car_1.MakeHonkNoise(car_1.IsDriveable);
 
             garage.CarsLot.Add(car_1);
-
+            
             Car car_2 = new Car(2000, "Ford", "F-150", "hummmmmmmm", "Honk Honk", true);
-
+            Console.WriteLine($"The total number of cars in your garage is: {CarLot.numberOfCars}");
             car_2.MakeEngineNoise(car_2.EngineNoise);
             car_2.MakeHonkNoise(car_2.IsDriveable);
 
             garage.CarsLot.Add(car_2);
 
             var car_3 = new Car(1990, "Volkswagen", "Beetle", "mmmmmmmmmmm", "beee-beeep", false);
+            Console.WriteLine($"The total number of cars in your garage is: {CarLot.numberOfCars}");
 
             car_3.MakeEngineNoise(car_3.EngineNoise);
             car_3.MakeHonkNoise(car_3.IsDriveable);
@@ -42,6 +46,8 @@ namespace CarLotSimulator
             garage.CarsLot.Add(car_3);
             Console.WriteLine("\nThese are the cars in my garage!");
             garage.MyGarage();
+            
+            Console.WriteLine($"The total number of cars in your garage is {CarLot.numberOfCars}");
 
             
 

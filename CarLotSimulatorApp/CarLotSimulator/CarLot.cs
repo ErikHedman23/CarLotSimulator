@@ -9,7 +9,8 @@ namespace CarLotSimulator
 {
     public class CarLot
     {
-        public List<Car> CarsLot { get; set; } = new List<Car>();
+        public  List<Car> CarsLot { get; set; } = new List<Car>();
+        public static int numberOfCars;
 
         public void MyGarage()
         {
@@ -18,5 +19,7 @@ namespace CarLotSimulator
                 car.CarDetails();
             }
         }
+        
+
     }
 }
