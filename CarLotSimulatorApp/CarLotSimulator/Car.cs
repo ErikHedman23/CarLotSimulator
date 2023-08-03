@@ -18,7 +18,7 @@ namespace CarLotSimulator
 
         public Car()
         {
-            CarLot.numberOfCars++;
+            CarLot.numberOfCars++; //Everytime this class is used to create a new instance of a car, CarLot.numberOfCars++ is called, and it increments the static field numberOfCars by 1 every time a new instance is created. 
         }
 
         public Car(int year, string make, string model, string engineNoise, string honkNoise, bool isDriveable)
